@@ -39,7 +39,7 @@ async def mensagem_desativacao(interaction:discord.Interaction):
     estado["ativado"] = False
     salvar_estado(estado)
     await interaction.response.send_message(
-        f"Nós cablocos também temos férias {interaction.user.mention}, estamos desativados para descansar."
+        f"Valeu por nos dar férias {interaction.user.mention}, estamos desativando para descansar."
     )
 
 @bot.tree.command(name="status", description="Verifica qual o status do Bot.")
