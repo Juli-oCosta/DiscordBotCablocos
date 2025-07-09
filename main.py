@@ -46,6 +46,8 @@ async def mensagem_desativacao(interaction:discord.Interaction):
 async def mensagem_status(interaction:discord.Interaction):
     mensagem = f"Aopa {interaction.user.mention}, no momento nós cablocos estamos"
     estado = carregar_estado()
+    # if bot.estado.get("ativado", False): # Se encontra a chave, retorna ela, caso não encontre, retorna 'False'.
+    # Dar uma olhada melhor nisso pois parece ser um código mais seguro de se usar q o if abaixo.
     if estado["ativado"] == True:
         mensagem += " ativos."
     else:
