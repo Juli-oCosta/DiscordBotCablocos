@@ -2,7 +2,6 @@ import discord
 from discord import app_commands
 import os
 from dotenv import load_dotenv
-
 from utils.data_handler import carregar_estado, salvar_estado
 
 load_dotenv()
@@ -29,6 +28,7 @@ async def mensagem_ativacao(interaction:discord.Interaction):
     estado = carregar_estado()
     estado["ativado"] = True
     salvar_estado(estado)
+
     await interaction.response.send_message(
         f"Não se preocupe {interaction.user.mention}, nós, os cablocos estamos ativos sempre de olho."
     )
@@ -38,23 +38,21 @@ async def mensagem_desativacao(interaction:discord.Interaction):
     estado = carregar_estado()
     estado["ativado"] = False
     salvar_estado(estado)
+
     await interaction.response.send_message(
         f"Valeu por nos dar férias {interaction.user.mention}, estamos desativando para descansar."
     )
 
 @bot.tree.command(name="status", description="Verifica qual o status do Bot.")
 async def mensagem_status(interaction:discord.Interaction):
-    mensagem = f"Aopa {interaction.user.mention}, no momento nós cablocos estamos"
     estado = carregar_estado()
-    # if bot.estado.get("ativado", False): # Se encontra a chave, retorna ela, caso não encontre, retorna 'False'.
-    # Dar uma olhada melhor nisso pois parece ser um código mais seguro de se usar q o if abaixo.
-    if estado["ativado"] == True:
-        mensagem += " ativos."
-    else:
-        mensagem += " desativados."
     
-    await interaction.response.send_message(
-        mensagem
+    ativo = estado.get("ativado", False)
+    mensagem = (
+        f"Aopa {interaction.user.mention}, no momento nós cablocos estamos "
+        + ("ativos." if ativo else "desativados.")
     )
+    
+    await interaction.response.send_message(mensagem)
 
 bot.run(TOKEN)
