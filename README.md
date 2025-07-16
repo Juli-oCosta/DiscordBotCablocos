@@ -57,3 +57,61 @@ A lógica principal, a ser implementada em breve, será baseada em tarefas agend
 ---
 
 📘 [English version below](#-bot-cabloco---discord-english-version)
+
+---
+
+# 🤖 Pal Bot - Discord
+
+A simple Discord bot, created as a side project to bring a running joke between friends to life. The main idea is to have a bot that sends characteristic messages on specific days of the week, with a state control system to "activate" or "deactivate" its functions.
+
+---
+
+### 📜 About the Project
+
+This bot was born from a joke and has no professional goal. It was developed as a fun way to practice building bots using the `discord.py` library and to explore data persistence concepts.
+
+The "lore" behind the bot is that the **Pals** are mysterious entities who observe the server and manifest through cryptic messages — especially on Thursdays and Fridays. The project serves as a playground to test ideas and interactions with the Discord API.
+
+---
+
+### ✨ Current Features
+
+- **`/activate`** – "Wakes up" the Pals, allowing them to send automatic messages.
+- **`/deactivate`** – Gives the Pals some "time off", disabling message sending.
+- **`/status`** – Checks whether the Pals are active or resting.
+- **State Persistence** – The bot remembers its state (active/inactive) even after a restart, using a `.json` file for storage.
+
+---
+
+### 🔮 Future Features (The Core of the Bot)
+
+The main logic, to be implemented next, will be based on scheduled tasks:
+
+- **Thursday Messages:** The bot will send random and cryptic messages foreshadowing the arrival of Friday.
+- **Friday Messages:** Celebration messages marking the arrival of the big day.
+- **Special Warning:** A secret feature where, after 3 active Fridays, the bot will send a special warning message on a Wednesday and reset the counter.
+
+---
+
+### 🛠️ Technologies Used
+
+- **Language:** Python 3  
+- **Discord Library:** `discord.py` – Interaction with the Discord API  
+- **Environment Variables:** `python-dotenv` – Secure token management  
+- **Data Persistence:** JSON file to manage the bot's state  
+
+---
+
+### 🚀 How to Run the Project
+
+*(A step-by-step guide on running the bot locally will be added soon)*
+
+---
+
+### 📌 Main Goals
+
+- ✅ Practice Discord bot development using Python  
+- ✅ Bring an inside joke to life in a creative and functional way  
+- ✅ Learn simple data persistence with JSON  
+- ✅ Explore state management and custom slash commands  
+- ⚠️ **This is not a serious project!** It’s a fun space to learn, test, and enjoy coding.
