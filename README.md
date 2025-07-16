@@ -53,3 +53,7 @@ A lógica principal, a ser implementada em breve, será baseada em tarefas agend
 - ✅ Aprender sobre persistência de dados simples com JSON  
 - ✅ Explorar gerenciamento de estado e comandos personalizados  
 - ⚠️ **Este não é um projeto sério!** É um espaço de aprendizado, teste e diversão.
+
+---
+
+📘 [English version below](#-bot-cabloco---discord-english-version)
