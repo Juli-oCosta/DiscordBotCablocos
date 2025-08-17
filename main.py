@@ -13,7 +13,7 @@ class Cabloco(commands.Bot):
             command_prefix="!",
             intents = intents
         )
-        
+
     async def setup_hook(self):
         print("Iniciando o hook de configuração...")
         
