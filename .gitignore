@@ -1,16 +1,8 @@
-# Arquivos de Ambiente e Segredos
-# Impede que seu token do Discord seja enviado
 .env
 
-# Ambiente Virtual do Python
-# Impede o envio da pasta gigante do venv
 /venv/
 
-# Arquivos de Cache e Bytecode do Python
-# Ignora pastas de cache que o Python cria automaticamente (como a que já apareceu no seu projeto)
 __pycache__/
 *.pyc
 
-# Arquivos de configuração do VS Code
-# Ignora configurações do seu editor pessoal
 .vscode/
