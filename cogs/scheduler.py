@@ -18,7 +18,7 @@ class SchedulerCog(commands.Cog):
     def cog_unload(self):
         self.verificador_diario.cancel()
 
-    @tasks.loop(minutes=1)
+    @tasks.loop(minutes=5)
     async def verificador_diario(self):
 
         estado = carregar_estado()
